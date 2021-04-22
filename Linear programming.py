@@ -30,12 +30,20 @@ n = int(input("Введите, сколько уравний, ограничив
 # Создаём словарь
 limit_dict = dict()
 
+# Знаки для ограничений
+znak = list()
+
+# Правая часть уравнений
+value = list()
+
 # Заполняем сами ограничения
 for i in range(n):
     print("Введите коэффициенты для " + str(i+1) + " ограничения (am"+ str(i+1) +"):")
     limit_n = list()
     for j in range(xn):
         limit_n.append(float(input("x[" + str(j+1) + "]: ")))
+    znak.append(input("Введите знак для " + str(i+1) + " ограничения (am"+ str(i+1) +"): "))
+    value.append(float(input("Введите значение после знака: ")))
     limit_dict[i+1] = limit_n
 
 # Проверка на работоспособность
